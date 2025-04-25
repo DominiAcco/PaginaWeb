@@ -1,24 +1,34 @@
-*{
+* {
     font-size: 18px;
     box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
 
 
 }
+main{
+    margin-top: 80px;
+}
 
-header, #navbar{
+header,
+#navbar {
     display: flex;
     list-style: none;
 }
 
-header{
-   /*border: solid 1px #000;*/
-   width: 100%;
+header {
+    /*border: solid 1px #000;*/
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+   background-color:#201f1f;
+   transition: top 0.3s ease;
+
+    width: 100%;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
@@ -26,21 +36,23 @@ header{
     height: 90px;
 }
 
-li{
+li {
     list-style: none;
 
 }
 
-.navbar-item{
+.navbar-item {
     margin: 5px 20px;
     padding: 5px 20px;
 
 }
-a{
+
+a {
     text-decoration: none;
     color: #ff0101;
 }
-#banner{
+
+#banner {
     background-image: url(/assets/images/banner2.png);
     background-position: center;
     background-size: cover;
@@ -50,27 +62,29 @@ a{
     display: flex;
     align-items: center;
 }
-#logo{
+
+#logo {
     width: 120px;
 }
 
-#banner-text{
-    margin-left:15% ;
+#banner-text {
+    margin-left: 15%;
     width: 20%;
 
 
 }
-#banner h1{
+
+#banner h1 {
     margin-bottom: 0;
 }
 
 #banner h1,
-#banner h1 span{
+#banner h1 span {
     font-size: 2.2rem;
 
 }
 
-#banner h1 span{
+#banner h1 span {
     display: block;
 }
 
@@ -79,66 +93,81 @@ a{
     font-size: 1.5rem;
 
 }
-#banner-text a{
+
+#banner-text a {
     background-color: #3e6400;
     padding: 10px 50px;
     color: #fff;
     border-radius: 10px;
     font-weight: bold;
 }
-#conteiner-cards{
+
+#conteiner-cards {
     text-align: center;
     width: 100%;
 
 }
-#cards img{
-    width: 100%;
-}
-#cards{
+
+
+
+#cards1 {
     display: flex;
-    justify-content: space-between;
-
-
+    overflow: hidden;
+    scroll-behavior: smooth;
     align-items: stretch;
 
 }
-#conteiner-cards p{
-    color: #616161;
-}
-#cards p{
-    color:#616161 ;
+.cards-menu1{
+    flex: 0 0 580px;
+    scroll-snap-align: start;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgb(0,0,0,0,1);
 }
 
-.cards-div{
+#conteiner-cards p {
+    color: #616161;
+}
+
+#cards p {
+    color: #616161;
+}
+
+.cards-div {
     width: 100%;
     display: flex;
 
 
 }
-.cards-div img{
+
+.cards-div img {
     width: 45%;
 
 
 }
-.cards-text{
+
+.cards-text {
     background-color: #6161614d;
     border-radius: 10px;
     margin: 10px;
 }
-.cards-text h1{
+
+.cards-text h1 {
     text-align: center;
     font-size: 1rem;
 
 
 }
-.cards-text p{
+
+.cards-text p {
     text-align: center;
 
 
 }
 
 
-.cards-text a{
+.cards-text a {
     background-color: #3e6400;
     padding: 10px 50px;
     color: #fff;
@@ -146,8 +175,21 @@ a{
     font-weight: bold;
 
 }
+.carousel-buttons{
+    margin:  20px 0;
+    text-align: center;
+}
+.carousel-buttons button{
+    background-color: #201f1f;
+    color: #ff0000;
+    border: none;
+    border-radius: 10px;
+    padding:  10px 15px;
+    cursor: pointer;
+    margin: 0 10px;
+}
 
-.article-main{
+.article-main {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -157,35 +199,42 @@ a{
     margin-top: 30px;
 
 }
-.article-box{
+
+.article-box {
     width: 30%;
     text-align: left;
-    border:solid #000;
+    border: solid #000;
     border-radius: 10px;
     padding: 30px;
 
 }
-.article-box p{
+
+.article-box p {
     font-size: 1.2rem;
 }
-.article-box h1{
+
+.article-box h1 {
     display: inline-block;
 }
-.icons{
+
+.icons {
     font-size: 1.3rem;
 }
-#personagens{
+
+#personagens {
     width: 100%;
 
     background-color: #6b6b6b28;
 
 }
-#personagens h1{
+
+#personagens h1 {
     font-weight: bold;
     font-size: 1.4rem;
 
 }
-#personagens-intra{
+
+#personagens-intra {
     margin: 0 auto;
     width: 60%;
     display: flex;
@@ -193,21 +242,25 @@ a{
     gap: 30px;
 
 }
-.personagens-imagens img{
+
+.personagens-imagens img {
     width: 100%;
     border: solid #3e6400;
 
 }
-.personagens-imagens p{
+
+.personagens-imagens p {
     font-weight: bold;
 }
-.personagens-imagens h1{
+
+.personagens-imagens h1 {
     font-weight: bold;
     font-size: 1.3rem;
 
 
 }
-footer{
+
+footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -215,21 +268,70 @@ footer{
     background-color: #616161;
 }
 
-.footer{
+.footer {
     width: 30%;
 
 }
-.footer h1{
-    border-bottom:solid 5px #ff0000;
+
+.footer h1 {
+    border-bottom: solid 5px #ff0000;
     color: #000;
 }
-.nav-footer a{
+
+.nav-footer a {
     color: #000000;
 }
 
 
-.nav-footer li{
+.nav-footer li {
     margin: 25px 30px;
-    
 
+
+}
+
+.menu-btn {
+   display: none;
+    background:none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: #fff;
+}
+
+
+
+@media only screen and (max-width: 768px){}
+
+@media only screen and (max-width: 600px){
+    .menu-btn{
+        display: block;
+        position: absolute;
+        top:20px;
+        right: 20px;
+        z-index: 1100;
+    }
+    nav{
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        background-color: #fff;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+        padding: 60px;
+        transition: left 0.3s ease;
+    }
+    nav.active{
+        left:0;
+    }
+    #navbar{
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        gap: 10px;
+    }
+    .navbar-item{
+        padding: 15px 20px;
+        display: block;
+        color: #333;
+    }
 }
