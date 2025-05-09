@@ -1,12 +1,15 @@
 * {
     font-size: 18px;
     box-sizing: border-box;
+    /*border: solid 1px;*/
 }
 
 body {
     margin: 0;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
+
+  
 
 
 }
@@ -120,14 +123,14 @@ a {
 .cards-menu1{
     flex: 0 0 580px;
     scroll-snap-align: start;
-    background-color: #fff;
+    background-color:#ffffff;
     border-radius: 10px;
     padding: 10px;
     box-shadow: 0 2px 6px rgb(0,0,0,0,1);
 }
 
 #conteiner-cards p {
-    color: #616161;
+    color: #197008;
 }
 
 #cards p {
@@ -143,6 +146,7 @@ a {
 
 .cards-div img {
     width: 45%;
+    border-radius: 10px;
 
 
 }
@@ -180,8 +184,8 @@ a {
     text-align: center;
 }
 .carousel-buttons button{
-    background-color: #201f1f;
-    color: #ff0000;
+    background-color: #ff0101;
+    color: #000000;
     border: none;
     border-radius: 10px;
     padding:  10px 15px;
@@ -274,7 +278,7 @@ footer {
 }
 
 .footer h1 {
-    border-bottom: solid 5px #ff0000;
+    border-bottom: solid 5px #920000;
     color: #000;
 }
 
@@ -300,9 +304,7 @@ footer {
 
 
 
-@media only screen and (max-width: 768px){}
-
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 900px){
     .menu-btn{
         display: block;
         position: absolute;
@@ -315,7 +317,7 @@ footer {
         top: 0;
         left: -250px;
         width: 250px;
-        background-color: #fff;
+        background-color: #020202;
         box-shadow: 2px 0 5px rgba(0,0,0,0.1);
         padding: 60px;
         transition: left 0.3s ease;
@@ -332,6 +334,57 @@ footer {
     .navbar-item{
         padding: 15px 20px;
         display: block;
-        color: #333;
+        color: #ff0000;
+    }
+    #banner-text a{
+        padding: 5px;
+        margin: 0;
+    }  
+    .footer img{
+        width: 120px;
+
+    } 
+    .footer ul{
+        padding: 0 ;
+
+    }
+    #personagens-intra{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 600px){
+    footer{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .footer{
+        width: 95%;
+    }
+    .cards-div{
+        display: flex;
+        flex-direction: column;
+    }
+    .cards-div img{
+        width: 100%;
+    }
+    .article-main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .article-box{
+        width: 95%;
+    }
+    #personagens-intra{
+        display: flex;
+        flex-direction: column;
     }
 }
